@@ -1,25 +1,36 @@
 
     <h2 align="center"><b>THE DETAILS ARE</b></h2>
     <hr>
-<div *ngIf="row">
-   <h4><b>TransitGatewayId : </b> {{ row.TransitGatewayId}}</h4>
+<!-- <div *ngIf="newrow1"> -->
+    <!--below are the hardcoded data that is coming from the backend-->
+   <!-- <h4><b>TransitGatewayId : </b> {{ row.TransitGatewayId}}</h4>
     <h4><b>VpcId : </b>{{ row.VpcId}}</h4>
     <h4><b>State :  </b>{{row.State}}</h4>
    <h4><b>OwnerID: : </b>{{row.OwnerId}}</h4>
    <h4><b>CreationTime :</b>{{row.CreationTime}}</h4>
-   <h4><b>TransitGatewayArn :</b>{{row.TransitGatewayArn}}</h4>
-
-
-    
-    
-</div>
-
-    
+   <h4><b>TransitGatewayArn :</b>{{row.TransitGatewayArn}}</h4> -->
+ <!-- <ul *ngFor="let data of row">
+    <li>{{data}}</li>
+ </ul> -->
+ <table class="x" border="1px">
+     <th>
+     <tr *ngFor="let keys of keys" >
+         <td>{{keys}}</td>
+     </tr>
+    </th>
+ 
+ <th>
+    <tr *ngFor="let values of row" >
+        <td>{{values|json}}</td>
+    </tr>
+</th>
+</table>
+  
   <div class="bottom">
       <button  mat-raised-button color="primary" (click)="close()">close</button>
       
   </div>
-               
+           
    
 
    
