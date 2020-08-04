@@ -1,0 +1,25 @@
+
+    <h2 align="center"><b>THE DETAILS ARE</b></h2>
+    <hr>
+<div *ngIf="row">
+   <h4><b>TransitGatewayId : </b> {{ row.TransitGatewayId}}</h4>
+    <h4><b>VpcId : </b>{{ row.VpcId}}</h4>
+    <h4><b>State :  </b>{{row.State}}</h4>
+   <h4><b>OwnerID: : </b>{{row.OwnerId}}</h4>
+   <h4><b>CreationTime :</b>{{row.CreationTime}}</h4>
+   <h4><b>TransitGatewayArn :</b>{{row.TransitGatewayArn}}</h4>
+
+
+    
+    
+</div>
+
+    
+  <div class="bottom">
+      <button  mat-raised-button color="primary" (click)="close()">close</button>
+      
+  </div>
+               
+   
+
+   

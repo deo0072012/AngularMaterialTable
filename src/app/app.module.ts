@@ -10,11 +10,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JsonComponent
+    JsonComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatPaginatorModule,
     MatSortModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
