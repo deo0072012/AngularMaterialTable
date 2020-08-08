@@ -12,12 +12,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DetailsComponent } from './details/details.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     JsonComponent,
-    DetailsComponent
+    DetailsComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef ,MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
 
 
 @Component({
@@ -9,15 +10,16 @@ import { MatDialogRef ,MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class DetailsComponent implements OnInit {
 
-    row=[];
-    keys=[];
+    rows=[];
+    keys = [];
     // row1:string;
     // newrow=[];
     // newrow1=[];
-    constructor(@Inject(MAT_DIALOG_DATA) public arr: {},
+  constructor(@Inject(MAT_DIALOG_DATA) public arr: {},
     private dialogRef: MatDialogRef<DetailsComponent>) {
-      this.row=Object.values(arr);
-      this.keys=Object.keys(arr);
+      this.rows=Object.values(arr);
+      this.keys = Object.keys(arr);
+
       // -----BY COVERTING THE OBJECT INTO STRING BY STRINGIFY-----
       // this.row=JSON.stringify(arr);
       // this.row1=this.row.replace('"Options":{',"").replace(`"Tags":[{`,"").replace(`}`,"").replace(`}`,"").replace(`}`,"").replace(`}]}`,"").replace(`[{`,"").replace(`"Tags":[]}`,"").replace(`[`,"").replace(`{`,"").replace(`]`,"").replace(`]`,"").replace(`}]`,"");
@@ -25,15 +27,21 @@ export class DetailsComponent implements OnInit {
       // this.newrow1=this.newrow.splice(1,this.newrow.length);
         // console.log(this.newrow);
         //   console.log(this.row);
-     }
+       }
 
-   
   
 
   ngOnInit(): void {
   }
    close() {
     this.dialogRef.close();
-}
+   }
+  checkForType(row) {
+     return typeof row === 'string'|| typeof row==="boolean" || typeof row==="number";
+  }
+  mySortingFunction = (a, b) => {
+    return a.key > b.key ? -1 : 1;
+  }
+ 
    
 }

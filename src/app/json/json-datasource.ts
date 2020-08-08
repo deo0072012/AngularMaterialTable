@@ -36,12 +36,11 @@ const EXAMPLE_DATA:JsonItem[]= [
         'VpnEcmpSupport': 'enable',
         'DnsSupport': 'enable'
       },
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'US_WEST-1-TGW'
         }
-      ]
     },
     'type': 'TG',
     'region': 'us-west-1'
@@ -57,15 +56,14 @@ const EXAMPLE_DATA:JsonItem[]= [
       'VpcId': 'vpc-12323232',
       'OwnerId': 'arntgw123',
       'InstanceTenancy': 'default',
-      'CidrBlockAssociationSet': [
+      'CidrBlockAssociationSet': 
         {
           'AssociationId': 'vpc-cidr-assoc-a276bbc9',
           'CidrBlock': '172.31.0.0/16',
           'CidrBlockState': {
             'State': 'associated'
           }
-        }
-      ],
+        },
       'IsDefault': true
     },
     'type': 'VPC',
@@ -82,22 +80,20 @@ const EXAMPLE_DATA:JsonItem[]= [
       'VpcId': 'vpc-asdf98324sdf61231',
       'OwnerId': 'arntgw123',
       'InstanceTenancy': 'default',
-      'CidrBlockAssociationSet': [
+      'CidrBlockAssociationSet': 
         {
           'AssociationId': 'vpc-cidr-assoc-0d99729385853edf4',
           'CidrBlock': '10.175.0.0/16',
           'CidrBlockState': {
             'State': 'associated'
           }
-        }
-      ],
+        },
       'IsDefault': false,
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'TGW-HUB'
         }
-      ]
     },
     'type': 'VPC',
     'region': 'us-west-1'
@@ -107,20 +103,20 @@ const EXAMPLE_DATA:JsonItem[]= [
     'shape': 'image',
     'image': '/assets/images/aws/igw.png',
     'details': {
-      'Attachments': [
+      'Attachments': 
         {
           'State': 'available',
           'VpcId': 'vpc-asdf98324sdf61231'
         }
-      ],
+      ,
       'InternetGatewayId': 'igw-abc3123ad823ja733',
       'OwnerId': 'arntgw123',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'MQ-NW-IGW'
         }
-      ]
+      
     },
     'type': 'IGW',
     'region': 'us-west-1'
@@ -130,15 +126,15 @@ const EXAMPLE_DATA:JsonItem[]= [
     'shape': 'image',
     'image': '/assets/images/aws/igw.png',
     'details': {
-      'Attachments': [
+      'Attachments': 
         {
           'State': 'available',
           'VpcId': 'vpc-12323232'
         }
-      ],
+      ,
       'InternetGatewayId': 'igw-b93329dd',
       'OwnerId': 'arntgw123',
-      'Tags': []
+      'Tags': {}
     },
     'type': 'IGW',
     'region': 'us-west-1'
@@ -153,12 +149,11 @@ const EXAMPLE_DATA:JsonItem[]= [
       'IpAddress': '63.80.198.234',
       'State': 'available',
       'Type': 'ipsec.1',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'SJC_10G_CGW_B'
         }
-      ]
     },
     'type': 'CustomerGW',
     'region': 'us-west-1'
@@ -173,12 +168,11 @@ const EXAMPLE_DATA:JsonItem[]= [
       'IpAddress': '23.42.123.123',
       'State': 'available',
       'Type': 'ipsec.1',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'SJC_10G_CGW-A'
         }
-      ]
     },
     'type': 'CustomerGW',
     'region': 'us-west-1'
@@ -194,12 +188,11 @@ const EXAMPLE_DATA:JsonItem[]= [
       'State': 'available',
       'Type': 'ipsec.1',
       'DeviceName': 'SJEQ05FW01',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'SJC_CGW-A'
         }
-      ]
     },
     'type': 'CustomerGW',
     'region': 'us-west-1'
@@ -214,12 +207,11 @@ const EXAMPLE_DATA:JsonItem[]= [
       'IpAddress': '39.22.123.12',
       'State': 'available',
       'Type': 'ipsec.1',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'SJC_CGW-A'
         }
-      ]
     },
     'type': 'directconnectGW',
     'region': 'us-west-2'
@@ -255,12 +247,11 @@ const EXAMPLE_DATA:JsonItem[]= [
         'VpnEcmpSupport': 'enable',
         'DnsSupport': 'enable'
       },
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'US_WEST-2-TGW'
         }
-      ]
     },
     'type': 'TG',
     'region': 'us-west-2'
@@ -276,22 +267,20 @@ const EXAMPLE_DATA:JsonItem[]= [
       'VpcId': 'vpc-0eb3d87301888b642',
       'OwnerId': 'arntgw123',
       'InstanceTenancy': 'default',
-      'CidrBlockAssociationSet': [
+      'CidrBlockAssociationSet': 
         {
           'AssociationId': 'vpc-cidr-assoc-a934kdf8241283840',
           'CidrBlock': '10.176.0.0/16',
           'CidrBlockState': {
             'State': 'associated'
           }
-        }
-      ],
+        },
       'IsDefault': false,
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'TGW-HUB'
         }
-      ]
     },
     'type': 'VPC',
     'region': 'us-west-2'
@@ -307,15 +296,14 @@ const EXAMPLE_DATA:JsonItem[]= [
       'VpcId': 'vpc-6d5fc015',
       'OwnerId': 'arntgw123',
       'InstanceTenancy': 'default',
-      'CidrBlockAssociationSet': [
+      'CidrBlockAssociationSet': 
         {
           'AssociationId': 'vpc-cidr-assoc-10a9837a',
           'CidrBlock': '172.31.0.0/16',
           'CidrBlockState': {
             'State': 'associated'
           }
-        }
-      ],
+        },
       'IsDefault': true
     },
     'type': 'VPC',
@@ -326,20 +314,18 @@ const EXAMPLE_DATA:JsonItem[]= [
     'shape': 'image',
     'image': '/assets/images/aws/igw.png',
     'details': {
-      'Attachments': [
+      'Attachments': 
         {
           'State': 'available',
           'VpcId': 'vpc-0eb3d87301888b642'
-        }
-      ],
+        },
       'InternetGatewayId': 'igw-123asdfadfasdfuia',
       'OwnerId': 'arntgw123',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'MQ-NW-IGW'
         }
-      ]
     },
     'type': 'IGW',
     'region': 'us-west-2'
@@ -349,15 +335,15 @@ const EXAMPLE_DATA:JsonItem[]= [
     'shape': 'image',
     'image': '/assets/images/aws/igw.png',
     'details': {
-      'Attachments': [
+      'Attachments': 
         {
           'State': 'available',
           'VpcId': 'vpc-6d5fc015'
         }
-      ],
+      ,
       'InternetGatewayId': 'igw-804f8ef9',
       'OwnerId': 'arntgw123',
-      'Tags': []
+      'Tags': {}
     },
     'type': 'IGW',
     'region': 'us-west-2'
@@ -372,12 +358,11 @@ const EXAMPLE_DATA:JsonItem[]= [
       'IpAddress': '39.22.123.12',
       'State': 'available',
       'Type': 'ipsec.1',
-      'Tags': [
+      'Tags': 
         {
           'Key': 'Name',
           'Value': 'SJC_CGW-A'
         }
-      ]
     },
     'type': 'CustomerGW',
     'region': 'us-west-2'

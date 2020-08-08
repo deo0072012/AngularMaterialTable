@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { JsonDataSource, JsonItem } from './json-datasource';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DetailsComponent } from '../details/details.component';
 
 
@@ -41,7 +41,7 @@ export class JsonComponent implements AfterViewInit, OnInit {
   //   alert(JSON.stringify(name).split(','));
   //   console.log(name);
   // }
-  var arr=JSON.stringify(name);
+  // var arr=JSON.stringify(name);
     let dialogRef=this.dialog.open(DetailsComponent,{ data:name}
       
   );

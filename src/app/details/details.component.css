@@ -1,8 +1,36 @@
 .bottom{
     align-items: bottom;
+    float: right;
+    margin-top: 5px;
 }
 
 
 .x{
     background-color: goldenrod;
 }
+
+.key {
+    float: left;
+}
+
+.data {
+    align-items: center;
+    margin-left: 20px;
+}
+.obj-border {
+    border: 1px solid #555;
+}
+.full-width-table {
+    width: 100%;
+    
+  }
+  
+  .center
+  {
+      flex:1 1 auto;
+      text-align: center;
+  }
+  .rowdata1{
+     float : center;
+  }
+  
