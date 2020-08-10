@@ -1,8 +1,19 @@
-<mat-toolbar color="primary" >
-  <span class="center">Angular Material Json Data</span>
+<mat-toolbar color="primary" id="toolbar-color" >
+  <span  class="center"  id="txt"  >Angular Material Json Data</span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <i class="material-icons" id="icn">settings</i>
+  </button>
+<mat-menu #menu="matMenu">
+  <button
+  (click)="changetheme(color)"
+  *ngFor="let color of colors" mat-menu-item>
+  {{color.label}}
+</button>
+</mat-menu>
+
 </mat-toolbar>
 <div class="mat-elevation-z8">
-  <table mat-table class="full-width-table" matSort aria-label="Elements">
+  <table mat-table class="full-width-table" id="table-color" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="ID">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
@@ -20,9 +31,10 @@
       <td mat-cell *matCellDef="let row">{{row.region}}</td>
     </ng-container>
 
-    <ng-container matColumnDef="DETAILS">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>DETAILS</th>
-      <td mat-cell *matCellDef="let row" ><button mat-raised-button color="primary" (click)="getRecord(row.details)">GET DETAILS</button></td>
+    <ng-container    matColumnDef="DETAILS">
+      <th  mat-header-cell *matHeaderCellDef mat-sort-header >DETAILS</th>
+      <td   mat-cell  *matCellDef="let row "  >
+        <button mat-raised-button   color="primary" class="details" (click)="getRecord(element.details)">GET DETAILS</button></td>
       <div>
       </div>
     </ng-container>

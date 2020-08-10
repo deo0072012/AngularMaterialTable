@@ -1,6 +1,6 @@
-
-    <h2 align="center"><b>THE DETAILS ARE</b></h2>
-    <hr>
+<mat-toolbar color="primary" >
+    <span class="center">DETAILS ARE HERE</span>
+  </mat-toolbar>
 <!-- <div *ngIf="newrow1"> -->
     <!--below are the hardcoded data that is coming from the backend-->
    <!-- <h4><b>TransitGatewayId : </b> {{ row.TransitGatewayId}}</h4>
@@ -12,25 +12,61 @@
  <!-- <ul *ngFor="let data of row">
     <li>{{data}}</li>
  </ul> -->
- <table class="x" border="1px">
+ 
+ 
+ <!-- <table class="x">
      <th>
      <tr *ngFor="let keys of keys" >
          <td>{{keys}}</td>
      </tr>
     </th>
  
- <th>
+    <th>
     <tr *ngFor="let values of row" >
         <td>{{values|json}}</td>
     </tr>
 </th>
-</table>
-  
-  <div class="bottom">
-      <button  mat-raised-button color="primary" (click)="close()">close</button>
-      
-  </div>
-           
-   
+</table> -->
 
-   
+<table  class="x" border="1">
+    <th>
+        <tr class="spacing"
+        *ngFor="let row of rows; let index = index">
+            <td *ngIf="row">
+                <span class="key">{{keys[index]}}   : </span>
+                <span 
+                *ngIf="checkForType(row)"
+                class="data">
+                    {{row}}
+                </span>
+                <span 
+                *ngIf="!checkForType(row)"
+                class="data">
+                    <div 
+                    class="obj-border"
+                    *ngFor="let item of row | keyvalue:mySortingFunction">
+                        <span class="rowdata">{{item.key}} :</span> 
+                        <span 
+                        *ngIf="checkForType(item.value)"
+                        class="data">
+                            {{item.value}}
+                        </span>
+                        <span 
+                        *ngIf="!checkForType(item.value)"
+                        class="rowvalue">
+                        <div class="obj-border" *ngFor="let r of item.value|keyvalue:mySortingFunction">
+
+                           <span class="rdata1" >{{r.key}} : {{r.value}} </span>
+                           
+                        </div>
+                        
+                        </span>
+                    </div>
+                </span>
+            </td>
+        </tr>
+    </th>
+</table>
+<div class="bottom">
+    <button  mat-raised-button color="primary" (click)="close()">close</button>
+</div>

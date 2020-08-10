@@ -12,6 +12,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DetailsComponent } from './details/details.component';
+import {MatMenuModule} from '@angular/material/menu'; 
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { DetailsComponent } from './details/details.component';
     MatSortModule,
     MatToolbarModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
