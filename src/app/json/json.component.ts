@@ -60,7 +60,8 @@ export class JsonComponent implements AfterViewInit, OnInit {
     },
 
 ]
- det=[];
+det=[];
+
 changetheme(color)
 {
   const toolBarElement = document.getElementById('toolbar-color')
@@ -77,9 +78,8 @@ changetheme(color)
   materialicon.style.color=color.text;
   const button= document.getElementById("clr");
   button.style.textDecorationColor=color.text;
-  let det= document.getElementsByClassName("details");
+  let det= document.getElementsByClassName("details")
  
-
 }
 
   
