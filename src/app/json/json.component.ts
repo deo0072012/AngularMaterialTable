@@ -78,10 +78,7 @@ changetheme(color)
   const button= document.getElementById("clr");
   button.style.textDecorationColor=color.text;
   let det= document.getElementsByClassName("details");
-  for(let i=0; i <det.length ; i++)
-  {
-    det[i].getElementsByClassName
-  }
+ 
 
 }
 
